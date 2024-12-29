@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Radiation Prediction</title>
+</head>
+<body>
+  <h1>Solar Radiation Prediction</h1>
+  <form method="POST" action="/predict">
+    <label for="unixtime">UNIX Time:</label>
+    <input type="number" id="unixtime" name="unixtime" min="0" required><br>
+    <label for="temperature">Temperature (°C):</label>
+    <input type="number" id="temperature" name="temperature" required><br>
+    <label for="pressure">Pressure (Pa):</label>
+    <input type="number" id="pressure" name="pressure" step="0.01" required><br>
+    <label for="humidity">Humidity (%):</label>
+    <input type="number" id="humidity" name="humidity" min="0" max="100" required><br>
+    <label for="winddirection_dgr">Wind Direction (°):</label>
+    <input type="number" id="winddirection_dgr" name="winddirection_dgr" step="0.01" required><br>
+    <label for="speed">Wind Speed:</label>
+    <input type="number" id="speed" name="speed" step="0.01" required><br>
+    <label for="month">Month:</label>
+    <select id="month" name="month" required>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <option value="12">December</option>
+    </select><br>
+    <label for="day">Day:</label>
+    <input type="number" id="day" name="day" min="1" max="31" required><br>
+    <label for="hour">Hour:</label>
+    <input type="number" id="hour" name="hour" min="0" max="23" required><br>
+    <label for="minute">Minute:</label>
+    <input type="number" id="minute" name="minute" min="0" max="59" required><br>
+    <label for="second">Second:</label>
+    <input type="number" id="second" name="second" min="0" max="59" required><br>
+    <label for="sunrise_minute">Sunrise Minute:</label>
+    <input type="number" id="sunrise_minute" name="sunrise_minute" min="0" max="59" required><br>
+    <label for="sunset_hour">Sunset Hour:</label>
+    <input type="number" id="sunset_hour" name="sunset_hour" min="0" max="23" required><br>
+    <label for="sunset_minute">Sunset Minute:</label>
+    <input type="number" id="sunset_minute" name="sunset_minute" min="0" max="59" required><br>
+    <button type="submit">Predict Radiation</button>
+  </form>
+</body>
+</html>

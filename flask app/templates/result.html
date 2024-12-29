@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction Result</title>
+</head>
+<body>
+  <h1>Solar Radiation Prediction Result</h1>
+{% if prediction %}
+  <p>Predicted Solar Radiation: {{ prediction }}</p>
+{% else %}
+  <p>An error occurred during prediction.</p>
+{% endif %}
+</body>
+</html>
